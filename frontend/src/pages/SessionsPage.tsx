@@ -72,16 +72,16 @@ const SessionsPage = () => {
         <h2 style={{ color: "#94a3b8", fontSize: "0.85rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "1rem" }}>📅 Upcoming ({scheduled.length})</h2>
         {scheduled.length === 0
           ? <div style={{ background: "#1e293b", borderRadius: "10px", padding: "2rem", textAlign: "center", border: "1px dashed #334155", marginBottom: "2rem" }}>
-              <p style={{ color: "#475569", margin: 0, fontSize: "0.85rem" }}>No upcoming sessions. Accept a swap and schedule one!</p>
-            </div>
-          : scheduled.map(s => <SessionCard key={s.id} session={s} userId={user!.id} modeIcon={modeIcon} onMarkComplete={handleMarkComplete} onNote={id => { setNoteTarget(id); setNoteText(s.notes || ""); }} onReview={setReviewTarget} />)
+            <p style={{ color: "#475569", margin: 0, fontSize: "0.85rem" }}>No upcoming sessions. Accept a swap and schedule one!</p>
+          </div>
+          : scheduled.map(s => <SessionCard key={s.id} session={s} userId={user!.id} modeIcon={modeIcon} onMarkComplete={handleMarkComplete} onNote={(id: string) => { setNoteTarget(id); setNoteText(s.notes || ""); }} onReview={setReviewTarget} />)
         }
 
         {/* Completed */}
         {completed.length > 0 && (
           <>
             <h2 style={{ color: "#94a3b8", fontSize: "0.85rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.5px", margin: "2rem 0 1rem" }}>✅ Completed ({completed.length})</h2>
-            {completed.map(s => <SessionCard key={s.id} session={s} userId={user!.id} modeIcon={modeIcon} onMarkComplete={handleMarkComplete} onNote={id => { setNoteTarget(id); setNoteText(s.notes || ""); }} onReview={setReviewTarget} />)}
+            {completed.map(s => <SessionCard key={s.id} session={s} userId={user!.id} modeIcon={modeIcon} onMarkComplete={handleMarkComplete} onNote={(id: string) => { setNoteTarget(id); setNoteText(s.notes || ""); }} onReview={setReviewTarget} />)}
           </>
         )}
       </div>
@@ -110,7 +110,7 @@ const SessionsPage = () => {
               <div style={{ marginBottom: "1.25rem" }}>
                 <label style={{ color: "#94a3b8", fontSize: "0.82rem", display: "block", marginBottom: "8px" }}>Rating</label>
                 <div style={{ display: "flex", gap: "8px" }}>
-                  {[1,2,3,4,5].map(n => (
+                  {[1, 2, 3, 4, 5].map(n => (
                     <button key={n} type="button" onClick={() => setReviewForm({ ...reviewForm, rating: n })} style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}>
                       <Star size={28} color="#f59e0b" fill={n <= reviewForm.rating ? "#f59e0b" : "none"} />
                     </button>

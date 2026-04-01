@@ -54,7 +54,7 @@ const AboutPage = () => (
               <a href="https://linkedin.com/in/ishwar-lahire" target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: "6px", color: "#94a3b8", textDecoration: "none", background: "#334155", padding: "6px 12px", borderRadius: "8px", fontSize: "0.8rem" }}>
                 <Linkedin size={14} /> LinkedIn
               </a>
-              <a href="mailto:ishwarlahire1@gmail.com" style={{ display: "flex", alignItems: "center", gap: "6px", color: "#94a3b8", textDecoration: "none", background: "#334155", padding: "6px 12px", borderRadius: "8px", fontSize: "0.8rem" }}>
+              <a href="mailto:ishwarlahire2004@gmail.com" style={{ display: "flex", alignItems: "center", gap: "6px", color: "#94a3b8", textDecoration: "none", background: "#334155", padding: "6px 12px", borderRadius: "8px", fontSize: "0.8rem" }}>
                 <Mail size={14} /> Email
               </a>
             </div>
