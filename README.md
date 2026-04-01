@@ -315,7 +315,7 @@ skill-swap-network/
 - 💻 Specialized in Node.js, TypeScript, Fastify, PostgreSQL, Redis
 - 🔗 GitHub: [github.com/ishwarlahire](https://github.com/ishwarlahire)
 - 💼 LinkedIn: [linkedin.com/in/ishwar-lahire](https://linkedin.com/in/ishwar-lahire)
-- 📧 Email: ishwarlahire1@gmail.com
+- 📧 Email: ishwarlahire2004@gmail.com
 
 ---
 
